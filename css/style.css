@@ -7,16 +7,17 @@
 :root {
     --font-color:#050505;
     --white-bg:#f7f7f7;
-    --orange-1:#d2842b;
-    --blue-1:#2b58d2;
-    --purple-1:#ab2bd2;
-    --red-1:#d22b2b;
+    --orange-1:#FFAC30;
+    --blue-1:rgb(55, 109, 255);
+    --blue-2:#22cabf;
+    --purple-1:#ac2bd4;
+    --red-1:#ff5353;
 }
 
 body {
     width:100%;
     height:100%;
-    font-family: Poppins sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size: 1rem;
     background-color: aqua;
     scroll-behavior: smooth;
@@ -31,11 +32,7 @@ header {
     padding:1rem;
 }
 
-a {
-    text-decoration: none;
-    color:var(--font-color);
-    padding:1rem;
-}
+
 
 nav {
     width:100%;
@@ -44,15 +41,42 @@ nav {
     justify-content: flex-end;
 }
 
-nav ul {
+nav li {
+    display:inline-block;
     padding-right:1rem;
 }
 
-nav li {
+.animated-link {
     display:inline-block;
-    border:0.5rem solid var(--font-color);
-    border-radius:10%;
-    padding:0.8rem;
+    background-color: #050505;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.animated-link span {
+    display:inline-block;
+    background-color: #ac2bd4;
+    border: 3px solid black;
+    color:black;
+    padding: 0.5rem 1rem;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:5px;
+    cursor:pointer;
+    transition:
+    transform 0.15s ease-out,
+    color 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+.animated-link span:nth-child(1):hover {
+    transform:translate(-6px, -6px);
+    background-color: #22cabf;
+}
+
+.animated-link span:nth-child(2):hover {
+    transform:translate(-6px, -6px);
+    background-color: #c2ca22;
 }
 
 
@@ -73,8 +97,12 @@ section {
     background-color: var(--orange-1);
 }
 
-#contact {
+#competences {
     background-color: var(--purple-1);
+}
+
+#contact {
+    background-color: var(--blue-2);
 }
 
 
