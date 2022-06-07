@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+:root {
+    --font-color:#050505;
+    --white-bg:#f7f7f7;
+    --orange-1:#d2842b;
+    --blue-1:#2b58d2;
+    --purple-1:#ab2bd2;
+    --red-1:#d22b2b;
+}
+
+body {
+    width:100%;
+    height:100%;
+    font-family: Poppins sans-serif;
+    font-size: 1rem;
+    background-color: aqua;
+    scroll-behavior: smooth;
+}
+
+header {
+    width:100%;
+    height:4rem;
+    position: fixed;
+    display:flex;
+    justify-content: flex-end;
+    background-color: yellow;
+}
+
+section {
+    width:100%;
+    height:100vh;
+}
+
+#accueil {
+    background-color: var(--red-1);
+}
+
+#projets {
+    background-color: var(--blue-1);
+}
+
+#apropos {
+    background-color: var(--orange-1);
+}
+
+#contact {
+    background-color: var(--purple-1);
+}
+
+
+
