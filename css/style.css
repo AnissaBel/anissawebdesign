@@ -28,7 +28,6 @@ header {
     height:5rem;
     position: fixed;
     display:flex;
-    background-color: yellow;
     padding:1rem;
 }
 
@@ -55,7 +54,7 @@ nav li {
 
 .animated-link span {
     display:inline-block;
-    background-color: #ac2bd4;
+    background-color: var(--white-bg);
     border: 3px solid black;
     color:black;
     padding: 0.5rem 1rem;
