@@ -14,13 +14,16 @@
     --red-1:#ff5353;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width:100%;
     height:100%;
     font-family:'Poppins', sans-serif;
     font-size: 1rem;
     background-color: aqua;
-    scroll-behavior: smooth;
 }
 
 header {
@@ -29,6 +32,7 @@ header {
     position: fixed;
     display:flex;
     padding:1rem;
+    z-index:10;
 }
 
 
@@ -82,6 +86,10 @@ nav li {
 section {
     width:100%;
     height:100vh;
+    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #accueil {
@@ -104,5 +112,101 @@ section {
     background-color: var(--blue-2);
 }
 
+/* ________SECTION PROJETS________ */
+
+.projets__container {
+    width:100%;
+    height:100%;
+    padding:1rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.card__contour {
+    width:17rem;
+    height:24rem;
+    margin:2rem;
+    display:inline-block;
+    background-color: #050505;
+    border-radius: 9px;
+    border: 5px solid black;
+    text-decoration: none;
+    
+}
+
+.projets__container__cards {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    background-color: var(--white-bg);
+    border: 5px solid black;
+    color:black;
+    /* padding: 0.5rem 1rem; */
+    font-size:1rem;
+    font-weight:600;
+    border-radius:6px;
+    cursor:pointer;
+    transform:translate(-10px, -10px);
+    transition:
+    transform 0.15s ease-out,
+    color 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+.projets__container__cards:hover {
+    transform:translate(0px, 0px);
+    border: 3px solid black;
+    background-color: #22cabf;
+}
+
+.card__img__container {
+    width:100%;
+    height:50%;
+}
+
+.card__img__container img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.card__description__container {
+    padding:1rem;
+}
+
+
+.bloc__container {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    margin:0.5rem 0rem 0.5rem 0rem;
+    
+}
+
+.html__bloc,
+.css__bloc,
+.js__bloc {
+    width:30%;
+    padding:0.3rem;
+    border:2px solid black;
+    border-radius:2px;
+    text-align: center;
+}
+
+.html__bloc {
+    background-color: var(--orange-1);
+}
+.css__bloc {
+    background-color: var(--blue-2);
+}
+.js__bloc {
+    background-color: var(--purple-1);
+}
+
+
+/* ________SECTION PROJETS________ */
 
 
