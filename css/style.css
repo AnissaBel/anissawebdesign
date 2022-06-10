@@ -123,25 +123,35 @@ section {
 /* ________SECTION PROJETS________ */
 
 .projets__container {
-    width:100%;
-    height:100%;
-    padding:1rem;
-    display:flex;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-flow: row wrap;
 }
 
 
 .card__contour {
-    width:17rem;
-    height:24rem;
-    margin:2rem;
-    display:inline-block;
+    min-width: 15rem;
+    height: 24rem;
+    margin: 2rem;
+    display: inline-block;
     background-color: #050505;
     border-radius: 6px;
     border: 4px solid black;
     text-decoration: none;
+    display: flex;
+    flex: 1 1 0%;
     
+}
+
+@media screen and (max-width:px) {
+    .card__contour {
+        min-width: 80%;
+    }
+     
 }
 
 .projets__container__cards {
