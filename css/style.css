@@ -86,11 +86,18 @@ nav li {
 
 section {
     width:100%;
-    height:100vh;
+    height:100%;
     padding:2rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
+}
+
+h3 {
+    font-size:2.5rem;
+    text-align: center;
+    margin:0 0 2rem 0;
+
 }
 
 @media screen and (max-width:950px) {
@@ -119,6 +126,19 @@ section {
 #contact {
     background-color: var(--blue-2);
 }
+
+/* ________SECTION ACCUEIL________ */
+
+#accueil {
+    width:100%;
+    height:100vh;
+}
+
+/* ________SECTION ACCUEIL________ */
+
+
+
+
 
 /* ________SECTION PROJETS________ */
 
@@ -238,5 +258,36 @@ section {
 
 
 /* ________SECTION PROJETS________ */
+
+
+/* ________SECTION A PROPOS________ */
+
+.apropos__container {
+    width:100%;
+    height: 100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text__apropos__container,
+.photo__apropos__container {
+    width:50%;
+    height:auto;
+    margin:2rem;
+}
+
+.titre__apropos{
+    margin: 0.5rem 0 0 0;
+    font-size: 1.5rem;
+}
+
+.text__apropos{
+    margin: 2rem 0 2rem 0;
+}
+
+
+/* ________SECTION A PROPOS________ */
 
 
