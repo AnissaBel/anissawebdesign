@@ -50,6 +50,7 @@ nav li {
 }
 
 .animated-link {
+    width: fit-content;
     display:inline-block;
     background-color: #050505;
     border-radius: 5px;
@@ -93,10 +94,24 @@ section {
     justify-content: center;
 }
 
+@media screen and (max-width: 800px){
+
+    section {
+        display:flex;
+        flex-direction:column;  
+    }
+    
+}
+
 h3 {
-    font-size:2.5rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin:0 0 2rem 0;
+    margin: 0 0 2rem 0;
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    text-shadow: black 3px 3px;
 
 }
 
@@ -154,22 +169,23 @@ h3 {
 
 
 .card__contour {
-    min-width: 15rem;
-    height: 24rem;
+    width: 255px;
+    /* min-width: 15rem; */
+    height: 400px;
     margin: 2rem;
     display: inline-block;
     background-color: #050505;
     border-radius: 6px;
-    border: 4px solid black;
+    border: 1px solid black;
     text-decoration: none;
     display: flex;
-    flex: 1 1 0%;
+    flex-wrap: wrap;
     
 }
 
-@media screen and (max-width:px) {
+@media screen and (max-width:400px) {
     .card__contour {
-        min-width: 80%;
+        min-width: 100%;
     }
      
 }
@@ -187,7 +203,7 @@ h3 {
     font-weight:600;
     border-radius:6px;
     cursor:pointer;
-    transform:translate(-10px, -10px);
+    transform: translate(-6px, -7px);
     transition:
     transform 0.15s ease-out,
     color 0.15s ease-out,
@@ -195,7 +211,7 @@ h3 {
 }
 
 .projets__container__cards:hover {
-    transform:translate(-5px, -5px);
+    transform:translate(0px, 0px);
     border: 4px solid black;
     background-color: #22cabf;
 }
@@ -213,31 +229,32 @@ h3 {
 }
 
 .card__description__container {
-    padding:0.9rem;
+    padding: 0.9rem;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.card__description__container h4 {
-    margin:0.7rem 0rem 0.7rem 0rem;
-}
 
 .card__description__container p {
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 
 .bloc__container {
-    width:100%;
-    display:flex;
+    width: 100%;
+    display: inline-flex;
     justify-content: space-between;
-    padding: 0.5rem 0rem 0rem 0rem;
-    margin-top: 1rem;
+    align-items: center;
     
 }
 
 .html__bloc,
 .css__bloc,
-.js__bloc {
+.js__bloc,
+.wordpress__bloc {
     width:30%;
     padding:0.3rem;
     border:2px solid black;
@@ -255,6 +272,13 @@ h3 {
 .js__bloc {
     background-color: var(--purple-1);
 }
+.wordpress__bloc {
+    width:fit-content;
+    background-color: var(--blue-1);
+    display:flex;
+    justify-self: center;
+    
+}
 
 
 /* ________SECTION PROJETS________ */
@@ -264,6 +288,93 @@ h3 {
 
 .apropos__container {
     width:100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px){
+
+    .apropos__container {
+        height:auto;
+        flex-direction:column-reverse; 
+    }
+    
+}
+
+.text__apropos__container,
+.photo__apropos__container {
+    margin:2rem;
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.text__apropos__container {
+    width:60%;
+    
+}
+
+
+.photo__apropos__container {
+    width:40%;
+    
+}
+
+@media screen and (max-width: 800px){
+
+    .text__apropos__container,
+    .photo__apropos__container {
+        width:80%;
+    }
+    
+}
+
+.titre__apropos{
+    margin: 0.5rem 0 0 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.text__apropos{
+    margin: 2rem 0 2rem 0;
+    font-size: 0.9rem;
+}
+
+
+.photo__apropos__container{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.photo__apropos__container img{
+    width: 100%;
+    height: 100%;
+    transform: translate(3px, -65px);
+    object-fit: contain;
+    
+}
+
+.cadre__photo {
+    width:18rem;
+    height:20rem;
+    background-color: var(--purple-1);
+    border: 2px solid black;
+    border-radius:50%;
+
+}
+
+
+/* ________SECTION A PROPOS________ */
+
+
+/* ________SECTION COMPETENCES________ */
+
+.competences__container {
+    width:100%;
     height: 100vh;
     display:flex;
     flex-direction: row;
@@ -271,23 +382,63 @@ h3 {
     align-items: center;
 }
 
-.text__apropos__container,
-.photo__apropos__container {
-    width:50%;
-    height:auto;
+@media screen and (max-width: 800px){
+
+    .competences__container {
+        height:auto;
+        flex-direction:column-reverse; 
+    }
+    
+}
+
+.icons__competences__container,
+.text__competences__container {
     margin:2rem;
+    display:flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.titre__apropos{
+.text__competences__container {
+    width:60%;
+    
+}
+
+
+.icons__competences__container {
+    width:40%;
+    
+}
+
+@media screen and (max-width: 800px){
+
+    .icons__competences__container,
+    .text__competences__container {
+        width:80%;
+    }
+    
+}
+
+.titre__competences{
     margin: 0.5rem 0 0 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
-.text__apropos{
+.text__competences{
     margin: 2rem 0 2rem 0;
+    font-size: 0.9rem;
 }
 
 
-/* ________SECTION A PROPOS________ */
+.icons__competences__container{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+/* ________SECTION COMPETENCES________ */
 
 
