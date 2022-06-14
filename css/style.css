@@ -92,6 +92,7 @@ section {
     display:flex;
     flex-direction: column;
     justify-content: center;
+    border:3px solid black;
 }
 
 @media screen and (max-width: 800px){
@@ -353,16 +354,16 @@ h3 {
 .photo__apropos__container img{
     width: 100%;
     height: 100%;
-    transform: translate(3px, -65px);
     object-fit: contain;
     
 }
 
 .cadre__photo {
-    width:18rem;
-    height:20rem;
+    width:23rem;
+    height:27rem;
+    /* transform: rotate(30deg); */
     background-color: var(--purple-1);
-    border: 2px solid black;
+    border: 4px solid black;
     border-radius:50%;
 
 }
@@ -400,13 +401,13 @@ h3 {
 }
 
 .text__competences__container {
-    width:60%;
+    width:50%;
     
 }
 
 
 .icons__competences__container {
-    width:40%;
+    width:50%;
     
 }
 
@@ -434,7 +435,77 @@ h3 {
 .icons__competences__container{
     justify-content: center;
     align-items: center;
+    display:flex;
+    flex-direction: row;
+
     
+}
+
+.uiux__contour,
+.integration__contour {
+    width: 50%;
+    height: auto;
+    margin: 2rem;
+    display: inline-block;
+    background-color: #050505;
+    border-radius: 6px;
+    border: 1px solid black;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+@media screen and (max-width:400px) {
+    .uiux__contour,
+    .integration__contour {
+        min-width: 100%;
+    }
+     
+}
+
+.uiux__container__cards,
+.integration__container__cards {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    background-color: var(--white-bg);
+    border: 4px solid black;
+    color:black;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:6px;
+    transform: translate(-6px, -7px);
+    
+}
+
+.uiux__description__container,
+.integration__description__container {
+    width:100%;
+    border-bottom: 4px solid black;
+    text-align: center;
+    padding:1rem;
+}
+
+.uiux__description__container,
+.integration__description__container p {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.icons_competences {
+    width:20%;
+    height:20%;
+    margin:1rem;
+    display:inline-block;
+    
+}
+
+.icons_competences img{
+    width:100%;
+    object-fit: cover;
+
 }
 
 
