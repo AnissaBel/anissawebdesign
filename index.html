@@ -237,7 +237,7 @@
                     Ce que j'utilise
                 </p>
                 <p class="text__competences">
-                    Durant ma formation  de Designer Web  puis en autodidacte j’ai appris à utiliser  Adobe Photoshop, 
+                    Durant ma formation  de Designer Web  puis en autodidacte j’ai appris à utiliser  Adobe <strong>Photoshop</strong>, 
                     Illustrator, In Design pour la partie UI/UX de mes projets. <br><br>
                     Je sais donc faire des maquettes et protoype, des illustrations et de la mise en page avec ces logiciels.
                     J’utilise également Figma pour les prototypes de sites avant de passer au code. <br><br>
@@ -264,38 +264,57 @@
         </div>
 
         <div class="contact__container">
-            <div class="contact__contour"><!-- div contour -->
 
-                <div class="contact__container__card"><!-- div container cards -->
-                    <p class="titre__contact">
-                        Venez dire halo !
-                    </p>
-                    <div class="contact__email">
-                        <div class="contact__icons">
-                            <img src="css/images/smiley logo.png" alt="Photo du projet 1 nommé Voyages Voyages dans un mockup ordinateur">
-                        </div>
-                        <a href = "mailto: anissa.belhedi@gmail.com" class="email">anissa.belhedi@gmail.com</a>
-                        <div class="contact__icons">
-                            <img src="css/images/smiley logo.png" alt="Photo du projet 1 nommé Voyages Voyages dans un mockup ordinateur">
-                        </div>
-                    </div>
-                    <div class="reseaux">
-                        <ul>
-                            <li><i class="fa-brands fa-linkedin"></i></li>
-                            <li><i class="fa-brands fa-instagram"></i></li>
-                            <li><i class="fa-brands fa-github-square"></i></li>
-                            
-                        </ul>
-                    </div>
-    
+            <form action="action_page.php" class=""><!-- FORM -->
+
                 
-                </div><!-- div  container cards -->
-    
-            </div> <!-- divcontour -->
-    
-            
+                <div class="input__line"><!--Input Line-->
 
-        </div>
+                    <div class="label__input">
+                        <label for="fname">Prénom</label>
+                        <div class="animated-input">
+                        <span><input type="text" id="fname" name="firstname"></span>  
+                        </div>
+                    </div>
+
+                    <div class="label__input">
+                        <label for="lname">Nom</label>
+                        <div class="animated-input">
+                            <span><input type="text" id="lname" name="lastname"></span>  
+                        </div>
+                    </div>
+                
+                    
+                    <div class="label__input">
+                        <label for="email">E mail</label>
+                        <div class="animated-input">
+                            <span><input type="email" id="email" name="lastname"></span>  
+                        </div>
+                    </div>
+
+                </div> <!--Input Line-->
+                
+                
+
+                <label for="subject">Message</label>
+
+                <div class="animated-input subject">
+                  <span><textarea id="subject" name="subject"></textarea></span>  
+                </div>
+
+                <div class="animated-input">
+                    <span><input type="submit" value="Envoyer"></span>  
+                </div>
+                        
+            </form><!-- FORM -->
+           
+            <?php
+            if (isset($_POST['message'])) {
+                $retour = mail('destinataire@free.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From: webmaster@monsite.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
+                if($retour)
+                    echo '<p>Votre message a bien été envoyé.</p>';
+            }
+            ?>
 
     </section>
     <!----------------------- SECTION CONTACT ------------------------->
