@@ -349,7 +349,7 @@ h3 {
 
 .photo__apropos__container {
     width:40%;
-    
+
 }
 
 @media screen and (max-width: 800px){
@@ -386,15 +386,22 @@ h3 {
     
 }
 
+
 .cadre__photo {
     width:23rem;
     height:27rem;
-    /* transform: rotate(30deg); */
-    background-color: var(--purple-1);
-    border: 4px solid black;
     border-radius:50%;
 
 }
+
+.cadre__photo img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+
 
 
 /* ________SECTION A PROPOS________ */
