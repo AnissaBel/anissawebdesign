@@ -184,6 +184,8 @@ h3 {
 
 
 
+
+
 /* ________SECTION PROJETS________ */
 
 .projets__container {
@@ -283,29 +285,35 @@ h3 {
 .html__bloc,
 .css__bloc,
 .js__bloc,
-.wordpress__bloc {
+.wordpress__bloc,
+.figma__bloc {
     width:30%;
     padding:0.3rem;
     border:2px solid black;
-    border-radius:2px;
+    border-radius:3px;
     text-align: center;
     font-size: 0.8rem;
 }
 
 .html__bloc {
-    background-color: var(--orange-1);
+    background-color: var(--red-1);
 }
 .css__bloc {
     background-color: var(--blue-2);
 }
 .js__bloc {
-    background-color: var(--purple-1);
+    background-color: var(--orange-1);
 }
 .wordpress__bloc {
     width:fit-content;
     background-color: var(--blue-1);
     display:flex;
     justify-self: center;
+    
+}
+.figma__bloc {
+    background-color: var(--purple-1);
+    
     
 }
 
@@ -374,6 +382,9 @@ h3 {
 
 
 .photo__apropos__container{
+    width:23rem;
+    height:27rem;
+    position: relative;
     justify-content: center;
     align-items: center;
     
@@ -387,20 +398,28 @@ h3 {
 }
 
 
-.cadre__photo {
-    width:23rem;
-    height:27rem;
-    border-radius:50%;
-
+.icon__para {
+    width:50px;
+    position:absolute ;
+    top:0;
+    right:0;
 }
 
-.cadre__photo img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-
+#bulle {
+    position:absolute ;
+    top:28%;
+}
+#hand {
+    position:absolute ;
+    top: 50%;
+    right: 87%;
 }
 
+#shine {
+    position:absolute ;
+    top: 72%;
+    right: 5%;;
+}
 
 
 
@@ -581,7 +600,7 @@ h3 {
 
 .contact__container {
     width:100%;
-    height:auto;
+    height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -698,9 +717,7 @@ h3 {
 form {
     display:flex;
     flex-direction: column;
-    -ms-flex: 100%;
-    flex: 100%;
-    width: 80%;
+    width: 70%;
     padding: 1em;
 
 }
@@ -737,7 +754,7 @@ label {
     width:100%;
     display:flex;
     flex-direction: column;
-    margin:1rem 1rem 1rem 0rem;
+    margin:0rem 1rem 1rem 0rem;
 }
 
 @media screen and (max-width:800px) {
@@ -766,7 +783,7 @@ label {
 
 .subject{
     width:100%; 
-    height:300px;
+    height:200px;
     margin-bottom:2rem;
 }
 
@@ -836,4 +853,171 @@ footer {
 
 /* ________SECTION FOOTER________ */
 
+
+
+/* ________PAGES DESCRIPTION PROJETS________ */
+
+.mockup {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.mockup img {
+    width:60%;
+    height:auto;
+    object-fit: cover;
+}
+
+.titre__presentation {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.text__presentation {
+    margin: 1rem 0rem;
+    font-size: 0.9rem
+}
+
+
+/* -----ANIM main droite------- */
+.hand__right {
+    width:100px;
+
+    -webkit-animation: right 1s infinite  alternate;
+    animation: right 1s infinite  alternate;
+}
+
+@keyframes right {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-30px); }
+}
+
+.hand__right img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    transform:rotate(125deg);
+    
+    
+}
+
+.card__contour__clique {
+    position:relative;
+    width: 100%;
+    margin: 2rem;
+    display: inline-block;
+    background-color: #050505;
+    border-radius: 6px;
+    border: 1px solid black;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cadre__photo__clique {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 6px;
+    border: 3px solid black;
+    transform: translate(-10px, -10px);
+    transition:
+    transform 0.15s ease-out,
+    color 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+
+.cadre__photo__clique:hover {
+    transform: translate(-2px, -2px);
+   
+}
+
+.cadre__photo__clique img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}
+
+.cadre__photo__clique a{
+    text-decoration: none;
+    line-height:0;
+
+}
+
+.presentation {
+    width:100%;
+    height:auto;
+}
+
+.click {
+    width:fit-content;
+    position:absolute;
+    top: -15%;
+    left: 68%
+
+}
+
+.list__presentation {
+    width:70%;
+    height:auto;
+    display:flex;
+    justify-content: space-between;
+}
+
+.list__presentation__col {
+    margin:2rem;
+}
+
+.html__bloc__presentation,
+.css__bloc__presentation,
+.js__bloc__presentation,
+.wordpress__bloc__presentation,
+.figma__bloc__presentation {
+    width:100px;
+    padding:0.3rem;
+    border:2px solid black;
+    border-radius:3px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.html__bloc__presentation {
+    background-color: var(--red-1);
+}
+.css__bloc__presentation {
+    background-color: var(--blue-2);
+}
+.js__bloc__presentation {
+    background-color: var(--orange-1);
+}
+.wordpress__bloc__presentation {
+    width:fit-content;
+    background-color: var(--blue-1);
+    display:flex;
+    justify-self: center;
+    
+}
+.figma__bloc__presentation {
+    background-color: var(--purple-1);
+
+}
+
+.bloc {
+    list-style-type: none;
+    margin:0rem 0 1rem 0rem;
+}
+
+
+/* ________PAGES DESCRIPTION PROJETS________ */
 
