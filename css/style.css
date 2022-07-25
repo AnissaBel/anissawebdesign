@@ -26,6 +26,20 @@ body {
     background-color: aqua;
 }
 
+/* //PAGE ACCUEIL// */
+
+.h2__container {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: left;
+    margin: 0 0 2rem 0;
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    text-shadow: black 5px 5px;
+}
+
 
 header {
     width:100%;
@@ -200,7 +214,7 @@ h3 {
 
 
 .card__contour {
-    width: 255px;
+    width: 280px;
     /* min-width: 15rem; */
     height: 400px;
     margin: 2rem;
@@ -239,6 +253,7 @@ h3 {
     transform 0.15s ease-out,
     color 0.15s ease-out,
     background-color 0.15s ease-out;
+    text-decoration: none;
 }
 
 .projets__container__cards:hover {
@@ -267,10 +282,15 @@ h3 {
     justify-content: space-around;
 }
 
+h4 {
+    font-size:1.1rem ;
+}
+
 
 .card__description__container p {
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    margin: 0rem 0 1rem;
 }
 
 
@@ -377,7 +397,7 @@ h3 {
 
 .text__apropos{
     margin: 2rem 0 2rem 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 
@@ -399,7 +419,7 @@ h3 {
 
 
 .icon__para {
-    width:50px;
+    width:55px;
     position:absolute ;
     top:0;
     right:0;
@@ -407,18 +427,40 @@ h3 {
 
 #bulle {
     position:absolute ;
-    top:28%;
+    top:17%;
+    right:7%;
+    -webkit-animation: moverdown 1s infinite  alternate;
+    animation: moverdown 1s infinite  alternate;
 }
+@keyframes moverdown {
+    100% { transform: translateY(0); }
+    0% { transform: translateY(-20px); }
+}
+
+
 #hand {
     position:absolute ;
-    top: 50%;
-    right: 87%;
+    top: 46%;
+    right: 85%;
+    -webkit-animation: moverup 0.8s infinite  alternate;
+    animation: moverup 0.8s infinite  alternate;
+}
+@keyframes moverup {
+    100% { transform: translateY(0); }
+    0% { transform: translateY(20px); }
 }
 
 #shine {
     position:absolute ;
-    top: 72%;
-    right: 5%;;
+    top: 74%;
+    right: 10%;
+    -webkit-animation: moverslow 1.3s infinite  alternate;
+    animation: moverslow 1.3s infinite  alternate;
+}
+
+@keyframes moverslow {
+    100% { transform: translateY(0); }
+    0% { transform: translateY(20px); }
 }
 
 
@@ -470,7 +512,7 @@ h3 {
 
 .text__competences{
     margin: 2rem 0 2rem 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 
@@ -523,8 +565,20 @@ h3 {
     font-size:1rem;
     font-weight:600;
     border-radius:6px;
+    cursor: url(./images/hand_mouse_pointer_50px.png), auto;
     transform: translate(-10px, -10px);
+    transition:
+    transform 0.15s ease-out,
+    color 0.15s ease-out,
+    background-color 0.15s ease-out;
+    text-decoration: none;
     
+}
+
+.competences__container__cards:hover {
+    transform:translate(0px, 0px);
+    border: 4px solid black;
+    /* background-color: var(--red-1); */
 }
 
 .competences__container__cards h4{
