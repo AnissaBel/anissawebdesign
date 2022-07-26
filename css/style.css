@@ -48,10 +48,10 @@ header {
     position: fixed;
     display:flex;
     padding:1rem;
-    z-index:10;
+    z-index:100;
 }
 
-
+/* NAV DESKTOP */
 
 nav {
     width:100%;
@@ -65,7 +65,48 @@ nav li {
     padding-right:1rem;
 }
 
-.hamburger {
+
+.animated-link {
+    width: fit-content;
+    display:inline-block;
+    background-color: #050505;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.animated-link span {
+    display:inline-block;
+    background-color: var(--white-bg);
+    border: 3px solid black;
+    color:black;
+    padding: 0.5rem 1rem;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:5px;
+    cursor: url(./images/hand_mouse_pointer_50px.png), auto;
+    transform:translate(-2px, -2px);
+    transition:
+    transform 0.15s ease-out,
+    color 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+
+.animated-link span:nth-child(1):hover {
+    transform:translate(-6px, -6px);
+    background-color: #22cabf;
+    
+}
+
+.animated-link span:nth-child(2):hover {
+    transform:translate(-6px, -6px);
+    background-color: #c2ca22;
+}
+
+/* FIN NAV DESKTOP */
+
+ /* //PAGE NAV MOBILE // */
+ .hamburger {
     position:relative;
     display:block;
     width:45px;
@@ -75,6 +116,7 @@ nav li {
     background-color: var(--white-bg);
     border-radius: 5px;
     border:4px solid black;
+    z-index:110;
     
 }
 
@@ -103,44 +145,40 @@ nav li {
     opacity:0;
 }
 
-.animated-link {
-    width: fit-content;
-    display:inline-block;
-    background-color: #050505;
-    border-radius: 5px;
-    text-decoration: none;
+.mobile-nav {
+    position:fixed;
+    top:0;
+    left:100%;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index:50;
+    background-color:var(--purple-1);
+    padding-top:120px;
+    transition:0.4s;
 }
 
-.animated-link span {
-    display:inline-block;
-    background-color: var(--white-bg);
-    border: 3px solid black;
-    color:black;
-    padding: 0.5rem 1rem;
-    font-size:1rem;
-    font-weight:600;
-    border-radius:5px;
-    cursor: url(./images/hand_mouse_pointer_50px.png), auto;
-    transform:translate(-2px, -2px);
-    transition:
-    transform 0.15s ease-out,
-    color 0.15s ease-out,
-    background-color 0.15s ease-out;
+.mobile-nav.is-active {
+    left:0;
 }
 
-
-
-
-.animated-link span:nth-child(1):hover {
-    transform:translate(-6px, -6px);
-    background-color: #22cabf;
+.mobile-nav .ul__nav {
+    display:flex;
+    flex-direction: column;
+    justify-self: space-around;
+    text-align: center;
     
 }
 
-.animated-link span:nth-child(2):hover {
-    transform:translate(-6px, -6px);
-    background-color: #c2ca22;
+.mobile-nav .ul__nav li{
+    margin:2rem auto;
+    
 }
+     
+      /* //FIN PAGE NAV MOBILE // */
+
 
 
 section {
