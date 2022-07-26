@@ -1021,7 +1021,7 @@ footer {
 }
 
 @media screen and (max-width:1200px){
-    .text__presentation__container,
+    .text__presentation__container
     {
         width: 100%;
     } 
