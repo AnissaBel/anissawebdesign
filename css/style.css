@@ -65,6 +65,44 @@ nav li {
     padding-right:1rem;
 }
 
+.hamburger {
+    position:relative;
+    display:block;
+    width:45px;
+    height:45px;
+    padding:3px;
+    cursor: pointer;
+    background-color: var(--white-bg);
+    border-radius: 5px;
+    border:4px solid black;
+    
+}
+
+.hamburger .bar1,
+.hamburger .bar2,
+.hamburger .bar3 {
+    content:'';
+    display:block;
+    width:100%;
+    height:4px;
+    background-color: #050505;
+    margin:5px 0px;
+    transition:0.4s;
+    
+}
+
+.hamburger.is-active .bar1 {
+    transform:rotate(-45deg) translate(-6px, 6px);
+}
+
+.hamburger.is-active .bar3 {
+    transform:rotate(45deg) translate(-7px, -6px);
+}
+
+.hamburger.is-active .bar2 {
+    opacity:0;
+}
+
 .animated-link {
     width: fit-content;
     display:inline-block;
