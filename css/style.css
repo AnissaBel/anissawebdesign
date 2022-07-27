@@ -260,10 +260,6 @@ section {
     text-shadow: black 2px 2px;
 }
 
-.smileys{
-    display:inline-block;
-    width:30px;
-}
 
 @media screen and (max-width:950px) {
     section {
@@ -796,6 +792,7 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position:relative;
 }
 
 
@@ -1061,6 +1058,7 @@ footer {
 .accueil__presentation {
     height:100vh;
     background-color: var(--red-1);
+    position: relative;
 }
 
 .visuel {
@@ -1071,6 +1069,8 @@ footer {
 .mockup {
     width:80%;
     height:auto;
+    position:relative;
+    margin:2rem;
 }
 
 .mockup img{
@@ -1338,6 +1338,126 @@ footer {
 .bloc {
     list-style-type: none;
     margin:0rem 0 1rem 0rem;
+}
+
+/* SMILEYS ACCUEIL VISUEL ET CONTACT */
+
+
+.smileys {
+    width:55px;
+    /* position:absolute ;
+    top:0;
+    right:0; */
+}
+
+.smileys img{
+    width:100%;
+}
+
+.smile-right {
+    position:absolute ;
+    top: -7%;
+    right: 10%;
+    -webkit-animation: infiniteRotateReverse 1s infinite  alternate;
+    animation: infiniteRotateReverse 1s infinite  alternate;
+
+}
+
+@-webkit-keyframes infiniteRotateReverse {    
+        0% { -webkit-transform: rotate(360deg); }
+        100% { -webkit-transform: rotate(0deg); }
+    }
+
+
+.smile-left {
+    position:absolute ;
+    top: -7%;
+    right: 89%;
+    -webkit-animation: infiniteRotate 1s infinite  alternate;
+    animation: infiniteRotate 1s infinite  alternate;
+}
+
+@-webkit-keyframes infiniteRotate {    
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+
+.flamme {
+    position:absolute ;
+    top: -9%;
+    right: 2%;
+    -webkit-animation: moverup 1s infinite  alternate;
+    animation: moverup 1s infinite  alternate;
+}
+
+.scale-up {
+    -webkit-animation: scaleUp 1s infinite  alternate;
+    animation: scaleUp 1s infinite  alternate;
+}
+@keyframes scaleUp {
+    100% { transform: scale(1); }
+    0% { transform: scale(0.3); }
+}
+
+.scale-down {
+    -webkit-animation: scaleDown 1s infinite  alternate;
+    animation: scaleDown 1s infinite  alternate;
+}
+@keyframes scaleDown {
+    100% { transform: scale(0.5); }
+    0% { transform: scale(1.3); }
+}
+
+.up {
+    position:absolute ;
+    top: 9%;
+    left: 5%;
+}
+
+.down {
+    position:absolute ;
+    bottom: 6%;
+    right: 10%;
+}
+
+.right {
+    position:absolute ;
+    top: 26%;
+    right: 27%;
+}
+.left {
+    position:absolute ;
+    top: 66%;
+    left: 22%;
+}
+
+
+
+
+.stars-up {
+    position:absolute ;
+    top: 0%;
+    left: 6%;
+    -webkit-animation: moverdown 1s infinite  alternate;
+    animation: moverdown 1s infinite  alternate;
+}
+.stars-down {
+    position:absolute ;
+    bottom: -2%;
+    right: 0%;
+    -webkit-animation: moverup 1s infinite  alternate;
+    animation: moverup 1s infinite  alternate;
+}
+
+@keyframes moverdown {
+    100% { transform: translateY(0); }
+    0% { transform: translateY(-20px); }
+}
+
+@keyframes moverup {
+    100% { transform: translateY(-20px); }
+    0% { transform: translateY(0); }
 }
 
 
