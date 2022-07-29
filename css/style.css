@@ -29,10 +29,22 @@ body {
 
 /* //PAGE ACCUEIL// */
 
+.h1__container {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    text-shadow: black 5px 5px;
+}
+
 .h2__container {
     font-size: 3rem;
     font-weight: 900;
-    text-align: left;
+    text-align: center;
     margin: 0 0 2rem 0;
     color: black;
     -webkit-text-fill-color: white;
@@ -88,6 +100,7 @@ nav li {
     background-color: #050505;
     border-radius: 5px;
     text-decoration: none;
+    cursor:url(./images/hand_mouse_pointer_50px.png), auto;
 }
 
 .animated-link span {
@@ -307,16 +320,64 @@ section {
 }
 
 /* ________SECTION ACCUEIL________ */
+.smile-up {
+    position:absolute ;
+    top: 8%;
+    right: 71%;
+    -webkit-animation: infiniteRotateReverse 1s infinite  alternate;
+    animation: infiniteRotateReverse 1s infinite  alternate;
+
+}
+
+@media screen and (max-width:450px) {
+    .smile-up {
+        top: 3%;
+        right: 44%;
+    }
+}
+
+.smile-down {
+    position:absolute ;
+    top: 31%;
+    right: 5%;
+    -webkit-animation: infiniteRotate 1s infinite  alternate;
+    animation: infiniteRotate 1s infinite  alternate;
+}
+@media screen and (max-width:450px) {
+    .smile-down {
+        top: 69%;
+        right: 8%;
+    }
+}
+
+.smile-botleft {
+    position:absolute ;
+    bottom: 10%;
+    left: 5%;
+    -webkit-animation: infiniteRotate 1s infinite  alternate;
+    animation: infiniteRotate 1s infinite  alternate;
+}
+
 
 .hand__down {
-    width:100px;
-    height:100px;
+    width:80px;
+    height:80px;
     position:absolute;
     bottom:30px;
     left:50%;
     -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1s infinite  alternate;
 }
+
+@media screen and (max-width:950px) {
+    .hand__down {
+        width: 60px;
+        height: 60px;
+        left: 45%;
+    }
+    
+}
+
 
 @keyframes mover {
     0% { transform: translateY(0); }
@@ -1509,7 +1570,7 @@ right: 2%;
     .flamme {
         width:30px;
         position:absolute ;
-        top: -27%;
+        top: 0%;
         right: 0%;
     }
     
@@ -1571,7 +1632,7 @@ right: 2%;
     .stars-up {
         width: 40px;
         position: absolute;
-        top: -14%;
+        top: 0%;
         left: 1%;
     }
     
@@ -1588,8 +1649,8 @@ right: 2%;
     .stars-down {
         width:40px;
         position:absolute ;
-        top: 96%;
-        right: -10%;
+        top: 97%;
+        right: 0%;
     }
     
 }
