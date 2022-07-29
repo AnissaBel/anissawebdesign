@@ -226,7 +226,8 @@ section {
 
     section {
         display:flex;
-        flex-direction:column;  
+        flex-direction:column;
+        padding:1rem; 
     }
     
 }
@@ -235,7 +236,7 @@ section {
     font-size: 2.5rem;
     font-weight: 900;
     text-align: center;
-    margin: 0 0 2rem 0;
+    margin: 1rem 0 2rem 0;
     color: black;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 3px;
@@ -509,9 +510,13 @@ h4 {
 
 @media screen and (max-width: 800px){
 
-    .text__apropos__container,
+    .text__apropos__container {
+        width:90%;
+    }
+
     .photo__apropos__container {
-        width:80%;
+        width:90%;
+        padding:1rem;
     }
     
 }
@@ -647,6 +652,10 @@ h4 {
 }
 
 
+.separation {
+    margin:2rem;
+}
+
 .competences-col {
     width:100%;
     display:flex;
@@ -720,7 +729,6 @@ h4 {
     width: 300px;
     height: 350px;
     margin: 2rem;
-    display: inline-block;
     background-color: #050505;
     border-radius: 6px;
     border: 1px solid black;
@@ -735,7 +743,7 @@ h4 {
 @media screen and (max-width:400px) {
     
     .competences__contour {
-        min-width: 100%;
+        width: 100%;
     }
      
 }
@@ -1121,7 +1129,7 @@ footer {
 }
 
 .mockup {
-    width:80%;
+    width:60%;
     height:auto;
     position:relative;
     margin:2rem;
@@ -1129,6 +1137,8 @@ footer {
 
 .mockup img{
     width:100%;
+    height:100%;
+    object-fit: contain;
     
 }
 
@@ -1418,6 +1428,17 @@ footer {
 
 }
 
+@media screen and (max-width:450px) {
+    .smile-right {
+        position:absolute ;
+        top: -9%;
+right: 2%;
+    }
+    
+}
+
+
+
 @-webkit-keyframes infiniteRotateReverse {    
         0% { -webkit-transform: rotate(360deg); }
         100% { -webkit-transform: rotate(0deg); }
@@ -1430,6 +1451,15 @@ footer {
     right: 89%;
     -webkit-animation: infiniteRotate 1s infinite  alternate;
     animation: infiniteRotate 1s infinite  alternate;
+}
+
+@media screen and (max-width:450px) {
+    .smile-left {
+        position:absolute ;
+        top: -9%;
+        right: 82%;
+    }
+    
 }
 
 @-webkit-keyframes infiniteRotate {    
