@@ -236,9 +236,9 @@ section {
     font-size: 2.5rem;
     font-weight: 900;
     text-align: center;
-    margin: 1rem 0 2rem 0;
+    margin: 0 0 1rem 0;
     color: black;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: var(--white-bg);
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black;
     text-shadow: black 3px 3px;
@@ -253,9 +253,19 @@ section {
 
 .strong {
     display:inline-block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 900;
     color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: black 2px 2px;
+}
+
+.outlined {
+    display:inline-block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color:var(--blue-2);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: black 2px 2px;
@@ -494,7 +504,7 @@ h4 {
     margin:2rem;
     display:flex;
     flex-direction: column;
-    text-align: left;
+    
 }
 
 .text__apropos__container {
@@ -538,8 +548,9 @@ h4 {
 .text__apropos{
     margin: 2rem 0 2rem 0;
     font-size: var(--main-font-size);
+    text-align: justify;
+    line-height:2rem;
 }
-
 
 .photo__apropos__container{
     width:23rem;
@@ -1129,10 +1140,17 @@ footer {
 }
 
 .mockup {
-    width:60%;
+    width:50%;
     height:auto;
     position:relative;
     margin:2rem;
+}
+
+@media screen and (max-width:450px){
+    .mockup {
+        width:80%;
+        
+    }
 }
 
 .mockup img{
@@ -1164,11 +1182,6 @@ footer {
     margin: 0.5rem 0 0 0;
     font-size: 1.5rem;
     font-weight: 600;
-}
-
-.text__presentation {
-    margin: 1rem 0rem;
-    font-size: var(--main-font-size)
 }
 
 
@@ -1222,8 +1235,10 @@ footer {
 
 
 .text__presentation{
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 0 3rem 0;
     font-size: var(--main-font-size);
+    text-align: justify;
+    
 }
 
 .photo__presentation__container{
@@ -1237,6 +1252,7 @@ footer {
 .text__presentation__container,
 .photo__presentation__container {
     width:50%;
+    padding:1rem;
 }
 
 .photo__presentation__container img{
@@ -1270,6 +1286,11 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+@media screen and (max-width:450px){
+    .card__contour__clique {
+        margin:0;
+    }
+}
 
 
 .cadre__photo__clique {
@@ -1288,6 +1309,7 @@ footer {
     color 0.15s ease-out,
     background-color 0.15s ease-out;
 }
+
 
 
 .cadre__photo__clique:hover {
@@ -1327,6 +1349,13 @@ footer {
     -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1s infinite  alternate;
 
+}
+
+@media screen and (max-width:450px){
+    .click {
+        top: -25%;
+        left: 57%;
+    }
 }
 
 @keyframes mover {
@@ -1470,10 +1499,20 @@ right: 2%;
 
 .flamme {
     position:absolute ;
-    top: -9%;
+    top: 1%;
     right: 2%;
     -webkit-animation: moverup 1s infinite  alternate;
     animation: moverup 1s infinite  alternate;
+}
+
+@media screen and (max-width:450px) {
+    .flamme {
+        width:30px;
+        position:absolute ;
+        top: -27%;
+        right: 0%;
+    }
+    
 }
 
 .scale-up {
@@ -1527,13 +1566,34 @@ right: 2%;
     -webkit-animation: moverdown 1s infinite  alternate;
     animation: moverdown 1s infinite  alternate;
 }
+
+@media screen and (max-width:450px) {
+    .stars-up {
+        width: 40px;
+        position: absolute;
+        top: -14%;
+        left: 1%;
+    }
+    
+}
+
 .stars-down {
     position:absolute ;
-    bottom: -2%;
+    top: 90%;
     right: 0%;
     -webkit-animation: moverup 1s infinite  alternate;
     animation: moverup 1s infinite  alternate;
 }
+@media screen and (max-width:450px) {
+    .stars-down {
+        width:40px;
+        position:absolute ;
+        top: 96%;
+        right: -10%;
+    }
+    
+}
+
 
 @keyframes moverdown {
     100% { transform: translateY(0); }
