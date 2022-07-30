@@ -570,7 +570,6 @@ h4 {
 
 .text__apropos__container {
     width:60%;
-    
 }
 
 
@@ -579,7 +578,7 @@ h4 {
 
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 950px){
 
     .text__apropos__container {
         width:90%;
@@ -1299,6 +1298,7 @@ footer {
     margin: 1rem 0 3rem 0;
     font-size: var(--main-font-size);
     text-align: justify;
+    line-height:2rem;
     
 }
 
@@ -1611,13 +1611,30 @@ right: 2%;
     top: 26%;
     right: 27%;
 }
+
+
+
 .left {
     position:absolute ;
     top: 66%;
     left: 22%;
 }
 
+@media screen and (max-width:450px) {
 
+    .right {
+        position:absolute ;
+        top: 18%;
+        right: 8%;
+    }
+
+    .left {
+        position:absolute ;
+        top: 69%;
+        left: 10%;
+    }
+
+}
 
 
 .stars-up {
