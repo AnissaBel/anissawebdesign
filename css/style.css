@@ -101,6 +101,7 @@ nav li {
     border-radius: 5px;
     text-decoration: none;
     cursor:url(./images/hand_mouse_pointer_50px.png), auto;
+    margin:1rem 0;
 }
 
 .animated-link span {
@@ -132,16 +133,28 @@ nav li {
     background-color: #c2ca22;
 }
 
+.pulse {
+    -webkit-animation: pulse 0.8s infinite  alternate;
+    animation: pulse 0.8s infinite  alternate;
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
 /* FIN NAV DESKTOP */
 
  /* //PAGE NAV MOBILE // */
+
  .hamburger {
     position:relative;
     display:block;
     width:45px;
     height:45px;
     padding:3px;
-    cursor: pointer;
+    cursor:pointer;
     background-color: var(--white-bg);
     border-radius: 5px;
     border:4px solid black;
@@ -727,11 +740,12 @@ h4 {
     margin:2rem;
 }
 
-.competences-col {
+.competences-col { 
     width:100%;
     display:flex;
     flex-direction: row;
     justify-content: center;
+    margin: 1rem 0;
 }
 
 @media screen and (max-width:1200px){
@@ -745,8 +759,8 @@ h4 {
 .cols-white {
     width:35rem;
     background-color: var(--white-bg);
-    border: 5px solid black;
-    border-radius: 5px;
+    border: 4px solid black;
+    border-radius: 6px;
     margin:2rem;
 }
 @media screen and (max-width:1200px){
@@ -1712,9 +1726,14 @@ right: 2%;
     }
 
     .illu {
-        width:40%;
+        width:30%;
         height:auto;
         margin:1rem;
+    }
+
+    .illu:hover {
+        transform: scale(1.5);
+        transition: 0.4s;
     }
     
     @media screen and (max-width:450px) {
@@ -1733,6 +1752,51 @@ right: 2%;
 
 
     .illu img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+
+
+    /* PAGE PRINTS */
+
+    .prints__container {
+        width:100%;
+        padding:2rem;
+        height: auto;
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction: row;
+    }
+
+    .prints {
+        width:30%;
+        height:auto;
+        margin:1rem;
+    }
+
+    .prints:hover {
+        transform: scale(2)translate(10%, -0%);
+        transition: 0.4s;
+    }
+    
+    @media screen and (max-width:450px) {
+
+        .prints__container {
+            padding:1rem;
+        }
+
+        .prints {
+            width:100%;
+            height:auto;
+           
+        }
+        
+    }
+
+
+    .prints img{
         width:100%;
         height:100%;
         object-fit:cover;
