@@ -594,8 +594,8 @@ h4 {
 .titre__projets{
     font-size: 1.3rem;
     font-weight: 600;
-    margin: 1rem 0 1rem;
-    text-align: center;
+    margin: 1rem;
+    text-align: justify;
 }
 
 .titre__apropos{
@@ -1281,6 +1281,23 @@ footer {
     text-shadow: black 5px 5px;
 }
 
+@media screen and (max-width:450px){
+
+    .titre__projet__sites {
+        font-size: 2rem;
+        font-weight: 900;
+        text-align: center;
+        margin: 0 0 2rem 0;
+        color: black;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: black;
+        text-shadow: black 5px 5px;
+    }
+    
+}
+
+
 
 .presentation__container {
     width: 100%;
@@ -1685,15 +1702,35 @@ right: 2%;
 
     /* PAGE ILLUSTRATION */
 
-    .illustration__container {
+    .illustrations__container {
         width:100%;
+        padding:2rem;
         height: auto;
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction: row;
     }
 
     .illu {
-        width:50%;
+        width:40%;
         height:auto;
+        margin:1rem;
     }
+    
+    @media screen and (max-width:450px) {
+
+        .illustrations__container {
+            padding:1rem;
+        }
+
+        .illu {
+            width:100%;
+            height:auto;
+           
+        }
+        
+    }
+
 
     .illu img{
         width:100%;
