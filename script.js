@@ -1,6 +1,5 @@
 
 
-window.onload=function() {
 
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile-nav');
@@ -21,6 +20,7 @@ window.onload=function() {
         menu_btn.classList.toggle('is-active');
         mobile_menu.classList.toggle('is-active');
     });
+
     projets_link.addEventListener('click',function() {
         menu_btn.classList.toggle('is-active');
         mobile_menu.classList.toggle('is-active');
@@ -29,11 +29,12 @@ window.onload=function() {
         menu_btn.classList.toggle('is-active');
         mobile_menu.classList.toggle('is-active');
     });
+    
     contact_link.addEventListener('click',function() {
         menu_btn.classList.toggle('is-active');
         mobile_menu.classList.toggle('is-active');
     });
 
 
-}
+
 
