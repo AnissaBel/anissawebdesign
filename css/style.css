@@ -1214,10 +1214,10 @@ footer {
 }
 
 .mockup {
-    width:50%;
+    width:55%;
     height:auto;
     position:relative;
-    margin:2rem;
+    margin:1rem;
 }
 
 @media screen and (max-width:450px){
