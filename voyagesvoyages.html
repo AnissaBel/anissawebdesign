@@ -215,14 +215,7 @@
                         
             </form><!-- FORM -->
            
-            <?php
-            if (isset($_POST['message'])) {
-                $retour = mail('destinataire@free.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From: webmaster@monsite.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
-                if($retour)
-                echo '<p>Votre message a bien été envoyé.</p>';
-            }
-            ?>
-
+        
     </section>
     <!----------------------- SECTION CONTACT ------------------------->
 
@@ -236,24 +229,31 @@
         </div>
     </footer>
     <!----------------------- SECTION FOOTER ------------------------->
-
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail (){
-            Email.send({
-                Host : "smtp.yourisp.com",
-                Username : "username",
-                Password : "password",
-                To : 'them@website.com',
-                From : "you@isp.com",
-                Subject : "This is the subject",
-                Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
+   
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('service_h75ok4c');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
         }
     </script>
+
+
     <script src ="script.js"></script>
 </body>
 </html>
