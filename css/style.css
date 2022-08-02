@@ -272,7 +272,7 @@ section {
 
 @media screen and (max-width:500px) {
     .h3__container {
-        font-size: 2rem;
+        font-size: 1.3rem;
         
     }
 }
@@ -744,24 +744,24 @@ h4 {
     width:100%;
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 1rem 0;
+    justify-content: space-around;
+    margin: 2rem 0;
 }
 
 @media screen and (max-width:1200px){
     .competences-col {
         width:100%;
         flex-direction: column;
-        justify-content: center;
+        
     }
 }
 
 .cols-white {
-    width:35rem;
+    width:45%;
     background-color: var(--white-bg);
     border: 4px solid black;
     border-radius: 6px;
-    margin:2rem;
+    
 }
 @media screen and (max-width:1200px){
     .cols-white {
@@ -1800,4 +1800,14 @@ right: 2%;
         width:100%;
         height:100%;
         object-fit:cover;
+    }
+
+
+    /* MENTIONS LEGALES */
+
+    .titre__mentions{
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 1rem 0;
+        text-align: left;
     }
