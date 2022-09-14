@@ -121,7 +121,7 @@
 
                 <a href="voyagesvoyages.html" target="blank" class="projets__container__cards"><!-- div projet container cards -->
                     <div class="card__img__container">
-                        <img src="css/images/Mockup_desktop_Voyage.png" alt="Photo de la page d'accueil du site Voyages Voyages dans un mockup ordinateur">
+                        <img src="css/images/Mockup_desktop_Voyage1.png" alt="Photo de la page d'accueil du site Voyages Voyages dans un mockup ordinateur">
                     </div>
 
                     <div class="card__description__container">
@@ -142,7 +142,7 @@
 
                 <a href="wildplantscafe.html" target="blank" class="projets__container__cards"><!-- div projet container cards -->
                     <div class="card__img__container">
-                        <img src="css/images/Mockup_desktop_Wild.png" alt="Photo de la page d'accueil du site Wild Plants Café dans un mockup ordinateur">
+                        <img src="css/images/Mockup_desktop_Wild1.png" alt="Photo de la page d'accueil du site Wild Plants Café dans un mockup ordinateur">
                     </div>
 
                     <div class="card__description__container">
@@ -162,7 +162,7 @@
 
                 <a href="elodielazarphotographie.html" target="blank" class="projets__container__cards"><!-- div projet container cards -->
                     <div class="card__img__container">
-                        <img src="css/images/Mockup_desktop_Elodie.png" alt="PPhoto de la page d'accueil du site Elodie lazar Photographie dans un mockup ordinateur">
+                        <img src="css/images/Mockup_desktop_Elodie1.png" alt="PPhoto de la page d'accueil du site Elodie lazar Photographie dans un mockup ordinateur">
                     </div>
 
                     <div class="card__description__container">
@@ -180,7 +180,7 @@
 
                 <a href="reinedjotangngnia.html" target="blank"class="projets__container__cards"><!-- div projet container cards -->
                     <div class="card__img__container">
-                        <img src="css/images/Mockup_desktop_Reine.png" alt="Photo de la page d'accueil du site Reine Djotang-Ngnia dans un mockup ordinateur">
+                        <img src="css/images/Mockup_desktop_Reine1.png" alt="Photo de la page d'accueil du site Reine Djotang-Ngnia dans un mockup ordinateur">
                     </div>
 
                     <div class="card__description__container">
@@ -364,6 +364,7 @@
             <div class="smileys smile-left" id="">
                 <img src="css/images/smiley_logo.png" alt="icone smiley sourire">
             </div>
+            
 
             <form action="action.php" method="post" id ="contact-form"><!-- FORM -->
 
@@ -399,12 +400,18 @@
                 <label for="subject">Message</label>
 
                 <div class="animated-input subject">
-                  <span><textarea id="subject" name="message"></textarea></span>  
+                  <span><textarea id="subject" name="message" required></textarea></span>  
                 </div>
 
                 <div class="animated-input submit">
                     <span class="animsubmit"><input type="submit" value="Envoyer" class="submit"></span>  
                 </div>
+
+                <php 
+                if ($retour) {
+                    echo "$msg";
+                }
+                ?>
                         
             </form><!-- FORM -->
            
