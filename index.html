@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+   
     <!----------------------- HEADER AND NAV ------------------------->
     <header>
 
@@ -406,15 +407,19 @@
                 <div class="animated-input submit">
                     <span class="animsubmit"><input type="submit" value="Envoyer" class="submit"></span>  
                 </div>
-
-                <php 
-                if ($retour) {
-                    echo "$msg";
-                }
-                ?>
                         
             </form><!-- FORM -->
-           
+           <div class="msg">
+            
+
+            <!-- <?php if(isset($retour && $retour!=''){?>
+                <?=$retour; ?>
+            <?php } ?>
+            <?php 
+             if(isset($msg) && !empty($msg)){
+                 echo $msg;
+             } ?>  -->
+           </div>
 
     </section>
     <!----------------------- SECTION CONTACT ------------------------->
@@ -433,5 +438,6 @@
 
 
     <script src ="script.js"></script>
+    
 </body>
 </html>
