@@ -217,7 +217,7 @@
                     Interressée par le design, le dessin, la peinture, l'informatique, le Web depuis toute jeune, 
                     j'ai effectué un bilan de compétence qui m'a fait réaliser que le <span class="strong" style="color:#ff5353">Webdesign</span> 
                     serait pour moi le métier idéal pour enfin <span class="strong" style="color:#22cabf">m'épanouir</span> en faisant quelque chose qui me <span class="strong" style="color:#D253FF">stimule</span> et qui réunit mes passions !
-                    J'ai donc appris lors d'une <span class="strong" style="color:#f7f7f7"> formation professionnelle </span> et surtout <span class="strong" style="color:#ff5353">"sur l'Internet"</span> comment  <span class="strong" style="color:#22cabf"> concevoir </span>  et  <span class="strong" style="color:#D253FF"> intégrer </span>  un site web de la maquette (UI/UX) jusqu'à la mise en ligne ! <br><br>
+                    J'ai donc appris lors d'une <span class="strong" style="color:#f7f7f7"> formation professionnelle </span> et surtout <span class="strong" style="color:#ff5353">"sur l'Internet"</span> comment  <span class="strong" style="color:#22cabf"> conçevoir </span>  et  <span class="strong" style="color:#D253FF"> intégrer </span>  un site web de la maquette (UI/UX) jusqu'à la mise en ligne ! <br><br>
                     Ayant travaillé brièvement en freelance, j'aimerais maintenant intégrer une <span class="strong" style="color:#22cabf">belle équipe</span>  au sein de laquelle 
                     je pourrai apporter <span class="strong" style="color:#D253FF">mes compétences</span> , un petit <span class="strong" style="color:#ff5353">grain de folie</span> et aussi apprendre encore plus de choses et <span class="strong" style="color:#22cabf">évoluer</span> en tant que <span class="strong" style="color:#ff5353">Webdesigner</span> !<br><br>
                     N'hésitez pas à jeter un oeil à mon CV et à m'écrire un petit mail pour qu'on se rencontre !
@@ -367,7 +367,7 @@
             </div>
             
 
-            <form action="action.php" method="post" id ="contact-form"><!-- FORM -->
+            <form action="" method="post" id ="contact-form"><!-- FORM -->
 
                 
                 <div class="input__line"><!--Input Line-->
@@ -410,15 +410,31 @@
                         
             </form><!-- FORM -->
            <div class="msg">
-            
 
-            <!-- <?php if(isset($retour && $retour!=''){?>
-                <?=$retour; ?>
-            <?php } ?>
             <?php 
-             if(isset($msg) && !empty($msg)){
-                 echo $msg;
-             } ?>  -->
+            if (isset($_POST["message"])) {
+                $message ="Ce message a été envoyé via la page contact du site 
+                anissawebdesign.com
+                Nom: " . $_POST["nom"] . "
+                Prenom: " . $_POST["prenom"] . "
+                Email: " . $_POST["email"] . "
+                Message: " . $_POST["message"];
+            
+            
+                $succes = "<p> Votre message a bien été envoyé ! </p>";
+                $fail = "<p> Oups! Une erreur s'est produite lors de l'envoi de votre message ! </p>";
+                $retour = mail("anissa.webdesign@gmail.com", $_POST["subject"], $message,
+                "From:contact@anissawebdesign.com" . "\r\n" . "Reply-to:" . $_POST["email"]);
+                if ($retour) {
+                    // header("location:index.html/#contact")
+                    echo "$succes";
+                }
+                else{
+                    // header("location:index.html/#contact")
+                    echo "$fail";
+                }
+            }
+            ?>
            </div>
 
     </section>
