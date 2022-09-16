@@ -7,16 +7,6 @@
 </head>
 <body>
     <header>
-
-        <div class="social__container">
-            <div class="social" id="linkedin">
-                <a href="https://www.linkedin.com/in/anissa-belhedi/?originalSubdomain=fr" target="blank"><img src="css/images/linkedin.png" alt="logo de linkedin"></a>
-            </div>
-            <div class="social" id="github">
-                <a href="https://github.com/AnissaBel" target="blank"><img src="css/images/github.png" alt="logo de github"></a>
-            </div>
-        </div>
-
         <nav>
             <ul class="ul__nav">
                 <li><a href="index.html#accueil" class="animated-link"><span>Accueil</span></a></li>
@@ -44,7 +34,7 @@
         <div class="smileys smile-botleft" id="">
             <img src="css/images/smiley_logo.png" alt="icone smiley sourire">
         </div>
-        
+
         <?php
 
             //Si le formulaire a été soumis
@@ -69,6 +59,15 @@
             }
             }
         ?>
+
+        <div class="social__container">
+            <div class="social" id="linkedin">
+                <a href="https://www.linkedin.com/in/anissa-belhedi/?originalSubdomain=fr" target="blank"><img src="css/images/linkedin.png" alt="logo de linkedin"></a>
+            </div>
+            <div class="social" id="github">
+                <a href="https://github.com/AnissaBel" target="blank"><img src="css/images/github.png" alt="logo de github"></a>
+            </div>
+        </div>
 
     </div>
        

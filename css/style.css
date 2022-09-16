@@ -155,7 +155,7 @@ header {
 
 @media screen and (max-width:570px) {
     .social__container {
-        width: 50px;
+        width: 60px;
         padding: 0.5rem;
     }
 }
@@ -671,13 +671,14 @@ h4 {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: black 4px 4px;
-    line-height:2;
+    
     position:relative;
 } 
 
 h5 {
     font-size:3rem ;
     text-align: center;
+    line-height:1.5;
 }
 
 
@@ -780,7 +781,7 @@ h5 {
 @media screen and (max-width: 950px){
 
     .text__apropos__container {
-        width:90%;
+        width:84%;
     }
 
     .photo__apropos__container {
