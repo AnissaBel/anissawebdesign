@@ -123,22 +123,22 @@
                 <img src="css/images/smiley_logo.png" alt="icone smiley sourire">
             </div>
 
-            <form action="action.php" method="post" id ="contact-form"><!-- FORM -->
+            <<form action="action.php" method="post" id ="contact-form"><!-- FORM -->
 
                 
                 <div class="input__line"><!--Input Line-->
 
                     <div class="label__input">
-                        <label for="fname">Prénom</label>
+                        <label for="prenom">Prénom</label>
                         <div class="animated-input">
-                        <span><input type="text" id="fname" name="user_name" required></span>  
+                            <span><input type="text" id="prenom" name="prenom" required></span>  
                         </div>
                     </div>
 
                     <div class="label__input">
-                        <label for="lname">Nom</label>
+                        <label for="nom">Nom</label>
                         <div class="animated-input">
-                            <span><input type="text" id="lname" name="lastname" required></span>  
+                            <span><input type="text" id="nom" name="nom" required></span>  
                         </div>
                     </div>
                 
@@ -146,7 +146,7 @@
                     <div class="label__input">
                         <label for="email">E mail</label>
                         <div class="animated-input">
-                            <span><input type="email" id="email" name="user_email" required></span>  
+                            <span><input type="email" id="email" name="email" required></span>  
                         </div>
                     </div>
 
@@ -157,7 +157,7 @@
                 <label for="subject">Message</label>
 
                 <div class="animated-input subject">
-                  <span><textarea id="subject" name="message"></textarea></span>  
+                  <span><textarea id="subject" name="message" required></textarea></span>  
                 </div>
 
                 <div class="animated-input submit">
@@ -180,23 +180,6 @@
     </footer>
     <!----------------------- SECTION FOOTER ------------------------->
 
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail (){
-            Email.send({
-                Host : "smtp.yourisp.com",
-                Username : "username",
-                Password : "password",
-                To : 'them@website.com',
-                From : "you@isp.com",
-                Subject : "This is the subject",
-                Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
-        }
-    </script>
     <script src ="script.js"></script>
 </body>
 </html>

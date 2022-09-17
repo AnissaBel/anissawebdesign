@@ -86,15 +86,12 @@
             
             Propriétaire du site : Anissa Belhedi - Contact : anissa.webdesign@gmail.com 0668569502 - Adresse : 16 BOULEVARD DE LA VICTOIRE.
             
-            Identification de l'entreprise : Anissa Belhedi au capital social de € - SIREN : 898 036 215 - RCS ou RM : - Adresse postale : 16 BOULEVARD DE LA VICTOIRE - [Consignes : ajoutez ici le lien hypertexte vers la page de vos conditions générales de vente si vous en avez une]
-            
-            Directeur de la publication : - Contact : .
+            Identification de l'entreprise : Anissa Belhedi au capital social de € - SIREN : 898 036 215 - RCS ou RM : - Adresse postale : 16 BOULEVARD DE LA VICTOIRE
             
             Hébergeur : OVH SAS - 2 rue Kellermann - BP 80157 - 59053 Roubaix Cedex 1 - Téléphone : 1007
             
             Délégué à la protection des données : Anissa Belhedi -
             
-            Autres contributeurs :
         </p>
             
             <p class="titre__mentions">
@@ -181,16 +178,16 @@
                 <div class="input__line"><!--Input Line-->
 
                     <div class="label__input">
-                        <label for="fname">Prénom</label>
+                        <label for="prenom">Prénom</label>
                         <div class="animated-input">
-                        <span><input type="text" id="fname" name="user_name" required></span>  
+                            <span><input type="text" id="prenom" name="prenom" required></span>  
                         </div>
                     </div>
 
                     <div class="label__input">
-                        <label for="lname">Nom</label>
+                        <label for="nom">Nom</label>
                         <div class="animated-input">
-                            <span><input type="text" id="lname" name="lastname" required></span>  
+                            <span><input type="text" id="nom" name="nom" required></span>  
                         </div>
                     </div>
                 
@@ -198,7 +195,7 @@
                     <div class="label__input">
                         <label for="email">E mail</label>
                         <div class="animated-input">
-                            <span><input type="email" id="email" name="user_email" required></span>  
+                            <span><input type="email" id="email" name="email" required></span>  
                         </div>
                     </div>
 
@@ -209,7 +206,7 @@
                 <label for="subject">Message</label>
 
                 <div class="animated-input subject">
-                  <span><textarea id="subject" name="message"></textarea></span>  
+                  <span><textarea id="subject" name="message" required></textarea></span>  
                 </div>
 
                 <div class="animated-input submit">
@@ -233,29 +230,6 @@
     </footer>
     <!----------------------- SECTION FOOTER ------------------------->
    
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('service_h75ok4c');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-
 
     <script src ="script.js"></script>
 </body>
