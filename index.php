@@ -30,7 +30,7 @@
             <ul class="ul__nav">
                 <li><a href="#accueil" class="animated-link"><span>Accueil</span></a></li>
                 <li><a href="#projets" class="animated-link"><span>Projets</span></a></li>
-                <li><a href="#apropos" class="animated-link"><span>A Propos</span></a></li>
+                <li><a href="#apropos" class="animated-link"><span>À Propos</span></a></li>
                 <li><a href="#contact" class="animated-link"><span>Contact</span></a></li>
             </ul>
         </nav>
@@ -49,7 +49,7 @@
         <ul class="ul__nav">
             <li><a href="#accueil" class="animated-link menu-link-1"><span>Accueil</span></a></li>
             <li><a href="#projets" class="animated-link menu-link-2"><span>Projets</span></a></li>
-            <li><a href="#apropos" class="animated-link menu-link-3"><span>A Propos</span></a></li>
+            <li><a href="#apropos" class="animated-link menu-link-3"><span>À Propos</span></a></li>
             <li><a href="#contact" class="animated-link menu-link-4"><span>Contact</span></a></li>
         </ul>
     </nav>
@@ -198,11 +198,11 @@
     </section>
     <!----------------------- SECTION PROJETS ------------------------->
 
-    <!----------------------- SECTION A PROPOS ------------------------->
+    <!----------------------- SECTION À Propos ------------------------->
     <section id="apropos">
         
         <div class="h3__container">
-            <h3>A PROPOS</h3>
+            <h3>À Propos</h3>
         </div>
 
         <div class="apropos__container">
@@ -244,7 +244,7 @@
         </div>
 
     </section>
-    <!----------------------- SECTION A PROPOS ------------------------->
+    <!----------------------- SECTION À Propos ------------------------->
     <section id="competences">
         <div class="h3__container">
             <h3>COMPETENCES</h3>
@@ -388,7 +388,7 @@
                 
                     
                     <div class="label__input">
-                        <label for="email">E mail</label>
+                        <label for="email">E-mail</label>
                         <div class="animated-input">
                             <span><input type="email" id="email" name="email" required></span>  
                         </div>
