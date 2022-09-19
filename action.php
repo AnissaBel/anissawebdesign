@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="css/images/icon__shine3.png">
    
 </head>
 <body>
@@ -44,7 +45,7 @@
         <?php
 
             //Si le formulaire a été soumis
-            if (isset($_POST["message"])) {
+            if (isset($_POST["message"])){
             $message ="Ce message a été envoyé via la page contact du site 
             anissawebdesign.com
             Nom: " . $_POST["nom"] . "
@@ -63,7 +64,7 @@
             else{
                 echo "$fail";
             }
-            }
+        }
         ?>
 
         <div class="social__container" style="width:110px;">

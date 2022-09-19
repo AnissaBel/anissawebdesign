@@ -80,7 +80,26 @@ body {
     }
 
     .h2__container {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: black 4px 4px;
+    }
+}
+
+@media screen and (max-width:340px) {
+
+    .h1__container{
+        font-size: 1.3rem;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        text-shadow: black 4px 4px;
+    }
+
+    .h2__container {
+    font-size: 1.5rem;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -410,6 +429,16 @@ section {
     }
 }
 
+@media screen and (max-width:350px) {
+    .h3__container {
+        font-size: 1.3rem;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        text-shadow: black 2px 2px;
+        
+    }
+}
+
 .strong {
     display:inline-block;
     font-size: 1.4rem;
@@ -496,6 +525,14 @@ section {
         margin:0;
     }
 
+
+}
+
+@media screen and (max-width:340px) {
+    #accueil{
+        padding:1rem;
+    }
+   
 
 }
 
@@ -609,6 +646,14 @@ section {
 @media screen and (max-width:400px) {
     .card__contour {
         min-width: 100%;
+    }
+     
+}
+
+@media screen and (max-width:340px) {
+    .card__contour {
+        min-width: 100%;
+        height: fit-content;
     }
      
 }
@@ -1050,6 +1095,15 @@ h5 {
     
     .competences__contour {
         width: 100%;
+    }
+     
+}
+
+@media screen and (max-width:340px) {
+    
+    .competences__contour {
+        width: 100%;
+        height: fit-content;
     }
      
 }
